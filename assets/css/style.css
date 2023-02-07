@@ -1,0 +1,307 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital@0;1&family=Oswald:wght@400;700&display=swap');
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    margin: 0; /* usado principalmente para deixar .line no top */
+}
+
+header .line {
+    background-color: #117050;
+    height: 10px;
+}
+
+.container {
+    max-width: 1140px; /* colocado uma width padrão para ser seguido */
+    margin: auto; /* centraliza o container */
+}
+
+ h1 {
+    font-size: 96px;
+    font-weight: bold;
+    font-family: 'Oswald', sans-serif;
+    line-height: 110px;
+    margin:0;
+    margin-bottom: 30px;
+}
+
+ h2 {
+    font-size: 36px;
+    font-weight: bold;
+    font-family: 'Oswald', sans-serif;
+    line-height: 45px;
+    margin: 20px 0px;
+
+}
+
+.bar {
+    width: 168px;
+    height: 22px;
+    background-color: #006341;;
+}
+
+.button {
+    display: inline-block;
+    border: 2px solid #454545;
+    padding: 12px 30px;
+    color: #454545;
+    text-decoration: none;
+    border-radius: 3px;
+}
+
+.button:hover {
+    background-color: #454545;
+    color: #fff;
+}
+
+
+.header--area {
+    display: flex;
+    justify-content: space-between;
+    align-items:center;
+    height: 100px;
+}
+
+.header-left img {
+    width:64px;
+    height:64px;
+}
+
+.header--search form { /* aplicado display flex no form pq seus filhos sao input e button */
+display:flex;
+align-items: center;
+}
+
+.header--search input {
+    font-size: 16px;
+    padding: 10px 15px;
+    border: 1px solid #999;
+    outline:0;
+    width: 100%; /* colocado para ficar responsivo */
+    max-width: 250px;
+}
+
+.header--search button {
+    border: 0;
+    background-color: transparent;
+    margin-left: -30px;
+    cursor: pointer;
+}
+
+.header--search img {
+    width: 16px;
+    height: 16px;
+}
+
+.header--right {
+    display: flex;
+    align-items: center;
+}
+
+.header--menu img {
+    width: 24px;
+    height: 24px;
+    margin-left: 50px;
+    cursor: pointer;
+}
+
+.banner {
+    background-image:url('../midia/bg.jpg');
+    background-position: center; /* centralizar backgroud*/
+    background-size: cover; /* pra img pegar o tamanho disponivel aum ou dim conforme o tamanho */
+    padding-top: 90px;
+    padding-bottom: 90px;
+}
+
+.banner--images {
+    margin-top: 60px;
+}
+
+.banner--images img {
+    width: 148px;
+    height: 148px;
+    border: 7px solid #117050;
+    border-radius: 50%;
+    margin-right: 40px;
+}
+
+.area1,
+.area2,
+.area3 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    
+}
+
+.area1--content, 
+.area2--content {
+    padding: 70px 115px ;
+}
+
+.area1--img1 {
+    height: 347px;
+    background-image: url('../midia/f2.jpg');
+    background-position: center;
+    background-size: cover;
+
+}
+
+.area1--img2 {
+    grid-column: 2/3;
+    grid-row: 1/3;
+    background-image: url('../midia/f1.jpg');
+    background-size:cover;
+    background-position: center;
+}
+
+.area1--quote {
+    font-family: 'OpenSans', sans-serif;
+    margin-bottom: 30px;
+}
+
+.area1--text, 
+.area2--text,
+.area3--text,
+.area4--text {
+    margin-bottom:60px;
+    line-height:30px;
+}
+
+.area2--img1 {
+    background-image: url('../midia/f3.jpg');
+    background-position:center;
+    background-size:cover;
+    grid-column: 1/2;
+    grid-row:1/3;
+}
+
+.area2--img2 {
+    background-image: url('../midia/f4.jpg');
+    background-position: cover;
+    background-size: cover;
+    height:460px;
+}
+
+.area3--content {
+    padding: 230px 115px;
+    background-image: url('../midia/bg2.jpg');
+    background-position: left;
+    background-size: cover;
+    
+    
+}
+
+.area3--img1 {
+    background-image: url('../midia/f5.jpg');
+    background-position: center;
+    background-size: cover;
+}
+
+.area4 {
+    display: grid;
+    grid-template-columns: 520px 1fr;
+    background-color: #e8e9ee;
+}
+
+.area4--content {
+ padding: 180px 115px;
+}
+
+.area4--img1 {
+    background-image: url('../midia/bg3.jpg');
+    background-position:left;
+}
+
+.area5 {
+    background-image:url(../midia/bg4.jpg);
+    background-position: center;
+    background-size: cover;
+    height: 600px;
+}
+
+footer {
+    background-color:#333;
+    height: 80px;
+    color: #fff;
+    padding: 80px;
+    text-align: center;
+    font-size:12px;
+}
+
+@media (min-width:769px) and (max-width: 1140px) {
+    .container {
+        padding-left:20px;
+        padding-right:20px;
+    }
+}
+
+@media (min-width:426px) and (max-width: 768px) {
+    .container {
+        padding-left:20px;
+        padding-right:20px;
+    }
+
+    .area1 {
+        grid-template-columns: 3fr 2fr;
+    }
+
+    .area2 {
+        grid-template-columns: 2fr 3fr;
+    }
+
+    .area3 {
+        grid-template-columns: 3fr 2fr;
+    }
+} 
+
+@media (max-width:425px) {
+    .container {
+        padding-left:20px;
+        padding-right:20px;
+    }
+
+    .header--search input {
+        max-width: 80px;
+    }
+
+    h1 {
+        font-size: 60px;
+        line-height: 50px;
+    }
+
+    h2 {
+        font-size: 25px;
+        line-height: 30px;
+    }
+
+    .banner--images img {
+        width: 70px;
+        height: 70px;
+        border: 3px solid #117050;
+        border-radius: 50%;
+        margin-right: 10px;
+    }
+
+    .area1,
+    .area2,
+    .area3,
+    .area4 {
+        grid-template-columns: 1fr;
+
+    }
+
+    .area1--content,
+    .area2--content,
+    .area3--content,
+    .area4--content {
+        padding: 40px;
+    }
+
+    .area5 {
+        height: 200px;
+    }
+
+    footer {
+        font-size: 12px;
+        padding: 40px 20px;
+    }
+}
